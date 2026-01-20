@@ -1,283 +1,441 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Playbook — 2º Preparatoria — Misión M11: El Agente en el Mundo Real</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playbook-S2-TM11</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1><span class="book-icon">📋</span> <strong>Playbook Misión M11: El Agente en el Mundo Real</strong></h1>
-    <div class="header-widgets">
-      <div class="timer-container">
-        <span id="timer">⏱️ 00:00</span>
-        <button id="startStop">Start</button>
-        <button id="reset">Reset</button>
-      </div>
-      <div class="theme-toggle">
-        <i class="fas fa-sun"></i>
-        <label class="switch">
-          <input type="checkbox" id="theme-toggle-input">
-          <span class="slider round"></span>
-        </label>
-        <i class="fas fa-moon"></i>
-      </div>
+    <header>
+        <h1><span class="book-icon">📋</span> <strong>Playbook: Misión 11 - 2do de Preparatoria</strong></h1>
+        <div class="header-widgets">
+            <div class="timer-container">
+                <span id="global-timer">⏱️ 40:00</span>
+                <button id="global-start-stop">Start</button>
+                <button id="global-reset">Reset</button>
+            </div>
+            <div class="theme-toggle">
+                <i class="fas fa-sun"></i>
+                <label class="switch">
+                    <input type="checkbox" id="theme-toggle-input">
+                    <span class="slider round"></span>
+                </label>
+                <i class="fas fa-moon"></i>
+            </div>
+        </div>
+    </header>
+    <div class="main-container">
+        <aside class="activity-list">
+            <h2>Actividades</h2>
+            <ul>
+                <li><a href="#activity-0">📝</a></li>
+                <li><a href="#activity-1">1</a></li>
+                <li><a href="#activity-2">2</a></li>
+                <li><a href="#activity-3">3</a></li>
+                <li><a href="#activity-4">4</a></li>
+                <li><a href="#activity-5">5</a></li>
+            </ul>
+        </aside>
+        <main class="content">
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+            <!-- ACTIVIDAD 0: DE UN VISTAZO -->
+            <div class="activity-card" id="activity-0">
+                <h2><span class="book-icon">📝</span> De un Vistazo: Comando Central</h2>
+                <p class="overview-subtitle">Todo lo que necesitas para preparar y ejecutar esta misión en minutos.</p>
+                
+                <div class="command-section">
+                    <h3>🎯 Objetivo de Aprendizaje</h3>
+                    <div class="objective-box">
+                        <p><strong>Los estudiantes podrán:</strong> usar Make, ChatGPT, Gemini y Claude para distinguir entre chatbots y agentes de IA para analizar casos de éxito y fracaso y comprender el pensamiento crítico sobre la responsabilidad y las consecuencias éticas/sociales de la IA.</p>
+                    </div>
+                </div>
+                <div class="command-section xolo-prompt">
+                    <h3>🤖 Prompt de Referencia para XOLO (Solo para Maestro)</h3>
+                    <div class="prompt-box">
+                        <div class="prompt-header">
+                            <span class="prompt-label">⚠️ NOTA: XOLO ya conoce el tema de esta misión. Este prompt es SOLO de referencia en caso de emergencia técnica:</span>
+                            <button class="copy-btn" onclick="copyPrompt('main-prompt')">
+                                <i class="fas fa-copy"></i> Copiar
+                            </button>
+                        </div>
+                        <pre id="main-prompt">Explícame la diferencia operativa entre un chatbot (responde) y un agente (actúa), y por qué esa diferencia cambia el nivel de riesgo y responsabilidad. Analicemos los dos casos (Wells Fargo vs. MD Anderson) para identificar factores de éxito/fracaso: objetivos realistas, madurez tecnológica, privacidad, y gobierno del proyecto. Guíame a convertir esos hallazgos en 3 principios claros para diseñar agentes de forma responsable y en un checklist ético que pueda aplicar a proyectos futuros.</pre>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>⚡ Puntos Esenciales de la Misión</h3>
+                    <div class="essentials-grid">
+                        <div class="essential-card">
+                            <div class="essential-icon">🎓</div>
+                            <h4>Concepto Clave</h4>
+                            <p>Agentes vs Chatbots: Mientras un chatbot solo conversa, un agente puede realizar acciones en el mundo real, lo que aumenta su utilidad pero también su responsabilidad ética.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🔧</div>
+                            <h4>Habilidad Técnica</h4>
+                            <p>Usar herramientas de IA para analizar casos reales y sintetizar principios de diseño responsable.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">🧪</div>
+                            <h4>Experimentación</h4>
+                            <p>Probar con diferentes criterios de evaluación para entender las limitaciones de la gobernanza en IA.</p>
+                        </div>
+                        <div class="essential-card">
+                            <div class="essential-icon">💬</div>
+                            <h4>Interacción con XOLO</h4>
+                            <p>XOLO ya conoce a cada estudiante y el tema de hoy. Solo abren el chat y comienzan a aprender. Tú guías el timing y motivación.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>📦 Checklist de Materiales</h3>
+                    <div class="materials-checklist">
+                        <label><input type="checkbox"> Proyector/pantalla + presentación (5 diapositivas)</label>
+                        <label><input type="checkbox"> Internet estable + Gnius Space con XOLO activo</label>
+                        <label><input type="checkbox"> Dispositivo con acceso a internet (1 por cada 2 estudiantes)</label>
+                        <label><input type="checkbox"> Acceso a Make (https://www.make.com/), ChatGPT, Gemini o Claude</label>
+                        <label><input type="checkbox"> Guía de casos: Wells Fargo vs MD Anderson</label>
+                        <label><input type="checkbox"> ⚠️ Esta misión usa análisis de sistemas y lógica de agentes</label>
+                        <label><input type="checkbox"> 📋 Nota: No se requiere extensión, se trabajará directamente en las plataformas web.</label>
+                    </div>
+                    <p class="care-reminder"><strong>🛡️ Cuidado del equipo:</strong> Mantener tus credenciales de software seguras, cerrar sesión al terminar y hacer un uso responsable de las plataformas.</p>
+                </div>
+                <div class="command-section">
+                    <h3>🗓️ Secuencia de la Misión (40 min)</h3>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot">1</div>
+                            <div class="timeline-content">
+                                <strong>Intro a la Misión</strong>
+                                <span class="time-badge">2 min</span>
+                                <p>Bienvenida, I Can Statement y contexto de la misión.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">2</div>
+                            <div class="timeline-content">
+                                <strong>A.I. Gym</strong>
+                                <span class="time-badge">8 min</span>
+                                <p>Los estudiantes abren el chat con XOLO y aprenden sobre agentes de IA y gobernanza (sin prompt específico).</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">3</div>
+                            <div class="timeline-content">
+                                <strong>Brain Spark</strong>
+                                <span class="time-badge">20 min</span>
+                                <p>Idear, construir y experimentar un programa con XOLO.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">4</div>
+                            <div class="timeline-content">
+                                <strong>Gnius STORM - Compartir</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Demostración y reflexión en parejas.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot">5</div>
+                            <div class="timeline-content">
+                                <strong>Entrega de Evidencias</strong>
+                                <span class="time-badge">5 min</span>
+                                <p>Subir capturas a Gnius Space y finalizar misión.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="command-section">
+                    <h3>🚨 Resolución Rápida de Problemas</h3>
+                    <div class="troubleshooting-list">
+                        <ul>
+                            <li><strong>Si los alumnos no pueden ingresar a Gnius Space:</strong> Activa XOLO SOS en <a href="https://xolo.gnius.club" target="_blank">xolo.gnius.club</a> para continuar la misión sin interrumpir la clase.</li>
+                            <li><strong>Si las plataformas de IA están saturadas:</strong> Intenta cambiar de navegador o usar una alternativa (ChatGPT/Gemini/Claude).</li> <li><strong>Si tienes dudas sobre los casos:</strong> Pide a XOLO que te resuma los puntos clave de Wells Fargo o MD Anderson.</li> <li><strong>Si hay errores en el código:</strong> Recordar a los estudiantes que XOLO puede ayudar a depurar. Pídeles que copien el error y se lo muestren a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 1: INTRO A LA MISIÓN -->
+            <div class="activity-card" id="activity-1">
+                <div class="activity-header">
+                    <h2>🚀 Actividad 1: Intro a la Misión</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 2:00</span>
+                        <button class="timer-start-btn" data-duration="120">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Dar la bienvenida con energía.</li>
+                            <li>Pedir a los alumnos que ingresen a Gnius Space.</li>
+                            <li>Proyecta diapositiva 1 con el I Can Statement.</li>
+                            <li>Motiva: "¡Hoy diseñaremos el futuro de la IA responsable!".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <ul>
+                            <li>XOLO ya está listo y conoce a cada estudiante.</li>
+                            <li>Sabe que hoy toca aprender sobre Agentes de IA y Ética.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Escucha la misión del día.</li>
+                            <li>Loguearse en Gnius Space.</li>
+                            <li>Preparación para trabajar en parejas.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 1: I Can Statement</h4>
+                    <div class="slide-content">
+                        <p><strong>🎯 Hoy seré capaz de:</strong></p>
+                        <p class="highlight-text">🤖 A distinguir chatbots de agentes para que podamos crear tecnología segura y ética.</p>
+                        <p><strong>Aplicación real:</strong> Los analistas de tecnología en empresas globales usan estos criterios para decidir qué procesos automatizar sin poner en riesgo la seguridad de los usuarios.</p>
+                        <p><strong>Tu aliado:</strong> XOLO ya sabe qué vas a aprender hoy. ¡Solo abre el chat y comienza!</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 2: A.I. GYM -->
+            <div class="activity-card" id="activity-2">
+                <div class="activity-header">
+                    <h2>🧠 Actividad 2: A.I. Gym</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 8:00</span>
+                        <button class="timer-start-btn" data-duration="480">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 2.</li>
+                            <li>Indica: "Abran el chat con XOLO y salúdenlo. Él ya sabe qué les va a enseñar hoy."</li>
+                            <li>Circula para asegurar que todos interactúan con XOLO.</li>
+                            <li>Si alguien tiene dudas, recuérdale: "Pregúntale a XOLO, él te puede explicar de otra forma".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Reconoce al estudiante y sus preferencias de aprendizaje.</li>
+                            <li>Explica cómo un agente de IA puede tomar decisiones y ejecutar acciones.</li>
+                            <li>Introduce el concepto de responsabilidad y gobernanza en proyectos de IA.</li>
+                            <li>Responde dudas sobre los conceptos.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Abrir el chat con XOLO y saludarlo.</li>
+                            <li>Aprender a usar herramientas de IA para diferenciar respuestas de acciones.</li>
+                            <li>Aprender sobre los factores de éxito y fracaso en casos reales.</li>
+                            <li>Despejar todas sus dudas preguntando a XOLO.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 2: A.I. GYM</h4>
+                    <div class="slide-content">
+                        <p><strong>💬 Abre el chat con XOLO y salúdalo:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"¡Hola XOLO! Estoy listo para aprender."</pre>
+                        </div>
+                        <p class="highlight-text" style="margin-top: 1rem;">✨ XOLO ya sabe quién eres y qué tema toca hoy. ¡Solo empieza a conversar!</p>
+                        <p class="highlight-text">🎯 Objetivo: Aprender a diferenciar chatbots de agentes y entender los riesgos éticos asociados.</p>
+                    </div>
+                </div>
+                
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">Ahora vamos a dar un paso importante en nuestro camino como innovadores digitales. Vamos a descubrir por qué algunos proyectos de IA triunfan y otros fallan. Abran el chat con XOLO y salúdenlo. XOLO ya los conoce y sabe exactamente qué les va a enseñar hoy. No necesitan escribir un prompt especial, solo empiecen a platicar con él sobre la diferencia entre un chatbot que solo habla y un agente que realmente actúa. Pónganle mucha atención a los casos de Wells Fargo y MD Anderson, y no duden en preguntarle cualquier duda.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 3: BRAIN SPARK -->
+            <div class="activity-card" id="activity-3">
+                <div class="activity-header">
+                    <h2>💡 Actividad 3: Brain Spark</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 20:00</span>
+                        <button class="timer-start-btn" data-duration="1200">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta la diapositiva 3.</li>
+                            <li>Indica: "Pidan a XOLO que los ayude a idear un proyecto. Cuando tengan su GCS, pásenlo a bloques en MakeCode, prueben en el simulador y luego con el hardware real".</li>
+                            <li>Entrega por parejas los herramientas digitales conforme los alumnos prueben su GCS en el simulador.</li>
+                            <li>Si hay errores, recuerda: "Pregúntenle a XOLO, él los ayuda a depurar".</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">✅ XOLO ACTIVO</p>
+                        <ul>
+                            <li>Ayuda a desarrollar una idea y un VIBE que aplique el análisis crítico de casos de IA.</li>
+                            <li>Entrega el GCS de la idea del genio.</li>
+                            <li>Resuelve errores de sintaxis o lógica.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Trabajar con XOLO una idea y un VIBE para estructurar un ensayo comparativo.</li>
+                            <li>Traducir el GCS de XOLO a bloques en MakeCode.</li>
+                            <li>Depurar su programa con XOLO si hay errores.</li>
+                            <li>Revisar la lógica de su checklist ético y probar su claridad.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 3: Brain Spark</h4>
+                    <div class="slide-content">
+                        <p><strong>1. 💬 Pide a XOLO que te ayude a crear:</strong></p>
+                        <div class="prompt-box">
+                            <pre>"Ayúdame a actuar como Analista de Casos de IA: quiero comparar Wells Fargo y MD Anderson para extraer aprendizajes accionables. Guíame a estructurar un ensayo breve con: (1) contexto del caso, (2) factores técnicos/organizacionales, (3) consecuencias éticas/sociales, y (4) mis 3 principios. Después, conviértelo en un checklist ético (preguntas concretas) para evaluar nuevos agentes. Ejecución: redacta el ensayo comparativo y entrega tu checklist en una sola página."</pre>
+                        </div>
+                        <p style="margin-top: 1.5rem;"><strong>2. 🔬 Experimenta y descubre con tu programa:</strong></p>
+                        <ul>
+                            <li>¿Tu ensayo cubre todos los puntos solicitados?</li>
+                            <li>¿Qué pasa si aplicas tu checklist a un agente de IA que conoces?</li>
+                            <li>¿Funciona igual tu checklist para un chatbot simple vs. un agente autónomo?</li>
+                            <li>¿Cómo ayuda tu checklist a garantizar la responsabilidad en el uso de la IA?</li>
+                            <li>¿De qué manera el enfoque Tech4Good cambia la forma en que evaluamos el éxito de un proyecto?</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="optional-script">
+                    <button class="collapsible-button">📖 Ver guion detallado (opcional)</button>
+                    <div class="collapsible-content">
+                        <p class="dialogue assistant">¡Es hora de crear! Vamos a convertirnos en analistas expertos. Usando lo que aprendieron con XOLO, van a redactar un ensayo comparativo y un checklist ético. Imaginen que son consultores para una gran empresa tecnológica. El flujo es: idear sus principios con XOLO, definir el VIBE de su ensayo, generar el contenido y finalmente crear su checklist. Por ejemplo, podrían proponer un agente para salud y usar su checklist para ver si es viable. Si tienen errores o dudas sobre cómo estructurar sus argumentos, pregúntenle a XOLO, él los ayudará a depurar sus ideas. ¡Manos a la obra!</p>
+                    </div>
+                </div>
+                <div class="challenge-prompt">
+                    <h4>🚀 Prompt de Desafío (para quienes terminen rápido)</h4>
+                    <div class="prompt-box">
+                        <p><strong>Si ya experimentaste con todo, pregunta a XOLO:</strong></p>
+                        <p class="challenge-text">"Ya probé con el análisis básico. ¿Puedes enseñarme cómo hacer que mi checklist incluya criterios específicos para agentes de IA en el sector salud?"</p>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 4: GNIUS STORM - COMPARTIR -->
+            <div class="activity-card" id="activity-4">
+                <div class="activity-header">
+                    <h2>⚡ Actividad 4: Gnius STORM - Compartir y Reflexionar</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Organiza las parejas para compartir.</li>
+                            <li>Gestiona los tiempos: 2 min demo + 2 min reflexión + 1 min cierre.</li>
+                            <li>Facilita retroalimentación constructiva.</li>
+                            <li>Cierra con reflexión sobre aplicaciones reales.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⏸️ XOLO EN ESPERA</p>
+                        <ul>
+                            <li>Disponible solo si hay dudas finales urgentes.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Demuestra su programa funcionando a otra pareja.</li>
+                            <li>Explica qué principios éticos definió bien.</li>
+                            <li>Comparte un descubrimiento interesante.</li>
+                            <li>Da retroalimentación positiva al compañero.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 4: Think-Pair-Share</h4>
+                    <div class="slide-content tps-structure">
+                        <div class="tps-phase">
+                            <h4>🤔 THINK (30 seg)</h4>
+                            <p>Reflexión individual: ¿Qué principios éticos definieron mejor tu propuesta? ¿Qué te sorprendió del caso MD Anderson?</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>👥 PAIR (2 min)</h4>
+                            <p>Con otra pareja: Demuestren su programa y expliquen su experiencia</p>
+                            <p class="highlight-text">Frase guía: "Mi análisis comparó Wells Fargo y MD Anderson. Me sorprendió que los factores organizacionales fueran tan determinantes."</p>
+                        </div>
+                        <div class="tps-phase">
+                            <h4>💬 SHARE (2 min)</h4>
+                            <p>Retroalimentación mutua y cierre del maestro.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ACTIVIDAD 5: ENTREGA DE EVIDENCIAS -->
+            <div class="activity-card" id="activity-5">
+                <div class="activity-header">
+                    <h2>✅ Actividad 5: Entrega de Evidencias</h2>
+                    <div class="activity-timer">
+                        <span class="activity-duration">⏱️ 5:00</span>
+                        <button class="timer-start-btn" data-duration="300">Iniciar</button>
+                    </div>
+                </div>
+                <div class="roles-section">
+                    <div class="role-card role-teacher">
+                        <h4>👨‍🏫 Rol del Maestro</h4>
+                        <ul>
+                            <li>Proyecta diapositiva 5 con las instrucciones.</li>
+                            <li>Guía a los estudiantes para tomar las capturas.</li>
+                            <li>Asegura que todos suban sus evidencias a Gnius Space.</li>
+                            <li>Felicita al grupo por completar la misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-xolo">
+                        <h4>🤖 Rol de XOLO</h4>
+                        <p class="xolo-status">⭕ XOLO FINALIZADO</p>
+                        <ul>
+                            <li>La interacción con XOLO ha terminado para esta misión.</li>
+                        </ul>
+                    </div>
+                    <div class="role-card role-student">
+                        <h4>👦 Rol del Alumno</h4>
+                        <ul>
+                            <li>Tomar screenshot de su código en MakeCode.</li>
+                            <li>Tomar screenshot de su conversación con XOLO.</li>
+                            <li>Subir ambas evidencias a Gnius Space.</li>
+                            <li>Dar click en "Finalizar Misión".</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide-reference">
+                    <h4>📊 Diapositiva 5: ¡Misión Cumplida!</h4>
+                    <div class="slide-content">
+                        <p><strong>📸 Para terminar, sube tus evidencias a Gnius Space:</strong></p>
+                        <ol>
+                            <li>Una captura de pantalla de tu programa final en <strong>MakeCode</strong>.</li>
+                            <li>Una captura de pantalla de tu conversación con <strong>XOLO</strong> donde te dio tu GCS.</li>
+                        </ol>
+                        <p class="highlight-text" style="margin-top: 1rem;">¡No olvides dar click en el botón <strong>"Finalizar Misión"</strong> cuando termines!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
-  </header>
-  <div class="main-container">
-    <aside class="activity-list">
-      <h2>Actividades</h2>
-      <ul>
-        <li><a href="#activity-0">📝</a></li>
-        <li><a href="#activity-1">1</a></li>
-        <li><a href="#activity-2">2</a></li>
-        <li><a href="#activity-3">3</a></li>
-        <li><a href="#activity-4">4</a></li>
-        <li><a href="#activity-5">5</a></li>
-      </ul>
-      <div class="sidebar-info">
-        <p>💡 Cada actividad está cuidadosamente diseñada para involucrar a los estudiantes.</p>
-        <p>⏱️ Se proporcionan estimaciones de tiempo para cada actividad para ayudarle a mantener el rumbo.</p>
-      </div>
-    </aside>
-    <main class="content">
-      <div class="progress-bar">
-        <div class="progress"></div>
-      </div>
-      <button id="toggle-dialogues">Mostrar todos los diálogos</button>
-    <section class="activity-card" id="activity-0">
-      <h2 class="activity-title">📝 De un Vistazo: Misión M11: El Agente en el Mundo Real</h2>
-      <p class="activity-purpose">Resumen de objetivos, secuencia y entregables de la sesión.</p>
-      <div class="overview">
-        <section class="overview-block">
-          <h3>Objetivos e “I Can”</h3>
-          <ul>
-            <li>Puedo diferenciar un chatbot de un agente de IA y justificar su aplicación según el contexto.</li>
-            <li>Puedo analizar casos de éxito y fracaso de agentes de IA para extraer principios de diseño responsable.</li>
-          </ul>
-        </section>
-        <section class="overview-block">
-          <h3>Secuencia y tiempos</h3>
-          <ol>
-            <li>Saludo Interactivo con IA — 3 min</li>
-            <li>“I Can” + Desafío — 5–7 min</li>
-            <li>AI GYM — 10–12 min</li>
-            <li>Brain Spark — 17–20 min</li>
-            <li>GNIUS STORM — 5 min</li>
-          </ol>
-        </section>
-        <section class="overview-block">
-          <h3>Entregable del Micro-Proyecto</h3>
-          <ul>
-            <li>Ensayo comparativo que analice casos de agentes de IA (Wells Fargo, MD Anderson) y proponga principios de diseño responsable.</li>
-          </ul>
-        </section>
-        <section class="overview-block">
-          <h3>Criterios de calidad</h3>
-          <ul>
-            <li>Claridad en la distinción entre chatbot y agente de IA.</li>
-            <li>Análisis crítico de los casos de Wells Fargo y MD Anderson.</li>
-            <li>Identificación de factores clave de éxito y fracaso.</li>
-            <li>Propuesta de principios fundamentales para el diseño responsable de agentes.</li>
-            <li>Consideración de consecuencias éticas y sociales en el diseño.</li>
-          </ul>
-        </section>
-        <section class="overview-block">
-          <h3>Materiales y preparación</h3>
-          <ul>
-            <li>Proyector e internet</li>
-            <li>LLM (para Xolo)</li>
-            <li>IDE/Notebook (para redacción del ensayo)</li>
-            <li>Casos de estudio (Wells Fargo, MD Anderson) disponibles para consulta.</li>
-            <li>Plantilla o guía para redacción de ensayo.</li>
-          </ul>
-        </section>
-      </div>
-    </section>
-    <!-- 1) Saludo Interactivo con IA -->
-    <section class="activity-card" id="activity-1">
-      <h2 class="activity-title">Saludo Interactivo con IA</h2>
-      <p class="activity-purpose">Activar a Xolo con perfil e intereses; conectar con el foco de la misión.</p>
-      <div class="steps">
-        <article class="step-card">
-          <div class="step-content">
-            <h3 class="step-title">Paso 1 — Bienvenida y foco</h3>
-            <p class="step-instructions">Proyectar Diapositiva 3. Presenta el tema y su valor profesional según la Columna 1.</p>
-          </div>
-          <div class="collapsible">
-            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-            <div class="collapsible-content">
-              <p class="dialogue assistant">Equipo: hoy profundizaremos en la distinción crucial entre chatbots y agentes de IA, analizando casos reales para comprender su impacto y las responsabilidades en su diseño. Enfocaremos el trabajo en cómo separar conversación de acción, usar herramientas con schemas, dar memoria y poner guardrails, para producir un análisis crítico que informe el diseño responsable de agentes.</p>
-            </div>
-          </div>
-        </article>
-        <article class="step-card">
-          <div class="step-content">
-            <h3 class="step-title">Paso 2 — Activación con Xolo</h3>
-            <p class="step-instructions">Cada estudiante envía a Xolo: “Hola Xolo, soy [Nombre], perfil [X]; me interesa [Y]. Misión M11: El Agente en el Mundo Real. Necesito foco en Agente vs. Chatbot y diseño responsable.”</p>
-          </div>
-          <div class="collapsible">
-            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-            <div class="collapsible-content">
-              <p class="dialogue assistant">Activen a Xolo con su perfil e intereses. Confirmen que comprendieron el criterio de hoy y sigan sus indicaciones personalizadas para abordar la complejidad del diseño de agentes de IA.</p>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-    <!-- 2) “I Can” + Desafío -->
-    <section class="activity-card" id="activity-2">
-      <h2 class="activity-title">“I Can Statement” + Desafío</h2>
-      <p class="activity-purpose">Alinear expectativas y definir el reto práctico.</p>
-      <div class="steps">
-        <article class="step-card">
-          <div class="step-content">
-            <h3 class="step-title">Paso 1 — Presenta el reto</h3>
-            <p class="step-instructions">Proyectar Diapositiva 4. Describe el reto y la meta observable, derivados de Columna 1 y 3.</p>
-          </div>
-          <div class="collapsible">
-            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-            <div class="collapsible-content">
-              <p class="dialogue assistant">El reto es producir un ensayo comparativo que analice casos reales de agentes de IA, identificando factores clave de éxito y fracaso, y proponiendo principios para su diseño responsable. Evaluaremos la profundidad del análisis, la pertinencia de los principios propuestos y la claridad en la diferenciación entre chatbot y agente, con evidencia del producto final.</p>
-            </div>
-          </div>
-        </article>
-        <article class="step-card">
-          <div class="step-content">
-            <h3 class="step-title">Paso 2 — Escribe tu “I Can”</h3>
-            <p class="step-instructions">Proyectar Diapositiva 5. Cada estudiante redacta 1 “I Can” concreto alineado al entregable de Columna 2.</p>
-          </div>
-          <div class="collapsible">
-            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-            <div class="collapsible-content">
-              <p class="dialogue assistant">Formula tu “Puedo…” en 1 frase: acción + criterio + resultado. Ej.: “Puedo analizar críticamente casos de agentes de IA para identificar sus implicaciones éticas y de diseño.” o “Puedo proponer principios fundamentales para el desarrollo responsable de agentes de IA, basándome en ejemplos reales.”</p>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-    <!-- 3) AI GYM -->
-    <section class="activity-card" id="activity-3">
-      <h2 class="activity-title">AI GYM</h2>
-      <p class="activity-purpose">Formalizar el marco/técnica/herramienta central de la misión.</p>
-      <div class="steps">
-        <article class="step-card">
-          <div class="step-content">
-            <h3 class="step-title">Paso 1 — Marco del día</h3>
-            <p class="step-instructions">Proyectar Diapositiva 6. Introduce el marco según Columna 3 (Agente vs. Chatbot, Gestión de Proyectos de IA, Consecuencias Éticas y Sociales).</p>
-          </div>
-          <div class="collapsible">
-            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-            <div class="collapsible-content">
-              <p class="dialogue assistant">Este marco agrega valor porque nos permite comprender la complejidad y responsabilidad inherente al diseño de sistemas inteligentes. Eviten confundir un chatbot con un agente con capacidad de acción, e ignorar las implicaciones éticas en el diseño. Usen la distinción clara y la consideración de riesgos para validar sus resultados.</p>
-            </div>
-          </div>
-        </article>
-        <article class="step-card">
-          <div class="step-content">
-            <h3 class="step-title">Paso 2 — Mini-demostración</h3>
-            <p class="step-instructions">Proyectar Diapositiva 7. Construye ejemplo mínimo alineado a las tres columnas del input.</p>
-          </div>
-          <div class="collapsible">
-            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-            <div class="collapsible-content">
-              <p class="dialogue assistant">Observa cómo un caso simplificado donde un 'chatbot' solo responde a preguntas y un 'agente' realiza una acción (ej. reserva una cita) impacta el resultado. Verifica con la capacidad de acción y los riesgos asociados.</p>
-            </div>
-          </div>
-        </article>
-        <article class="step-card">
-          <div class="step-content">
-            <h3 class="step-title">Paso 3 — Check rápido</h3>
-            <p class="step-instructions">Proyectar Diapositiva 8. Verifica comprensión con 2 preguntas breves.</p>
-          </div>
-          <div class="collapsible">
-            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-            <div class="collapsible-content">
-              <p class="dialogue assistant">Pregunta 1: Describe una situación donde un agente de IA sería más adecuado que un chatbot. Pregunta 2: Menciona un riesgo ético clave al diseñar un agente de IA.</p>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-    <!-- 4) Brain Spark -->
-    <section class="activity-card" id="activity-4">
-      <h2 class="activity-title">Brain Spark</h2>
-      <p class="activity-purpose">Producir el entregable tangible del Micro-Proyecto.</p>
-      <div class="steps">
-        <article class="step-card">
-          <div class="step-content">
-            <h3 class="step-title">Paso 1 — Producción</h3>
-            <p class="step-instructions">Proyectar Diapositiva 9. Indica el producto específico (Columna 2) y un checklist de calidad (Columna 3). Tiempo de trabajo autónomo.</p>
-          </div>
-          <div class="collapsible">
-            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-            <div class="collapsible-content">
-              <p class="dialogue assistant">N/A</p>
-            </div>
-          </div>
-        </article>
-        <article class="step-card">
-          <div class="step-content">
-            <h3 class="step-title">Paso 2 — Iteración</h3>
-            <p class="step-instructions">Proyectar Diapositiva 10. Pide una mejora concreta basada en criterios del marco.</p>
-          </div>
-          <div class="collapsible">
-            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-            <div class="collapsible-content">
-              <p class="dialogue assistant">Antes de cerrar: valida que tu ensayo compare ambos casos claramente y que proponga al menos 3 principios de diseño responsable. Si no se cumple, ajusta y vuelve a probar, añadiendo un apartado sobre cómo la transparencia y la auditabilidad podrían haber mejorado el caso de fracaso.</p>
-            </div>
-          </div>
-        </article>
-        <article class="step-card">
-          <div class="step-content">
-            <h3 class="step-title">Paso 3 — Evidencia</h3>
-            <p class="step-instructions">Proyectar Diapositiva 11. Solicita evidencia: documento del ensayo (PDF/Word).</p>
-          </div>
-          <div class="collapsible">
-            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-            <div class="collapsible-content">
-              <p class="dialogue assistant">Entrega con nombre: Ensayo_Agentes_IA_[Nombre]. Incluye el producto final, los resultados de tu análisis y una breve reflexión sobre el valor de la distinción entre chatbot y agente.</p>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-    <!-- 5) GNIUS STORM -->
-    <section class="activity-card" id="activity-5">
-      <h2 class="activity-title">GNIUS STORM</h2>
-      <p class="activity-purpose">Exhibir resultados y cerrar con síntesis accionable.</p>
-      <div class="steps">
-        <article class="step-card">
-          <div class="step-content">
-            <h3 class="step-title">Paso 1 — Showcase relámpago</h3>
-            <p class="step-instructions">2–3 presentaciones de 30–45 s, centradas en evidencia y criterio.</p>
-          </div>
-          <div class="collapsible">
-            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-            <div class="collapsible-content">
-              <p class="dialogue assistant">Enfoca tu presentación en la tesis principal de tu ensayo o en uno de los principios de diseño responsable más relevantes que hayas identificado. Justifica tu elección con evidencia de los casos estudiados.</p>
-            </div>
-          </div>
-        </article>
-        <article class="step-card">
-          <div class="step-content">
-            <h3 class="step-title">Paso 2 — Cierre ejecutivo</h3>
-            <p class="step-instructions">Proyectar Diapositiva 12. Síntesis: 1 aprendizaje, 1 criterio de mayor impacto y 1 siguiente paso fuera del aula.</p>
-          </div>
-          <div class="collapsible">
-            <button type="button" class="collapsible-button">Diálogo Sugerido</button>
-            <div class="collapsible-content">
-              <p class="dialogue assistant">Síntesis: La distinción entre chatbot y agente es fundamental para comprender su impacto y riesgos. Criterio clave: La consideración de las consecuencias éticas y sociales es tan crítica como la funcionalidad en el diseño de agentes. Siguiente paso aplicado: Investigar un marco de gobernanza de IA (ej. NIST AI Risk Management Framework) para aplicar sus principios a un proyecto personal.</p>
-            </div>
-          </div>
-        </article>
-      </div>
-    </section>
-    </main>
-  </div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
-</html>
+</html></html>
